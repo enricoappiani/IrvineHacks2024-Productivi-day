@@ -1,6 +1,6 @@
 import logo from './logo.jpg';
 import './App.css';
-
+import openAIOutput from './openai.mjs';
 
 function App() {
   return (

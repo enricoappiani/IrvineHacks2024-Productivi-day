@@ -1,6 +1,6 @@
 import logo from './logo.jpg';
 import './App.css';
-//import { specificResponse } from '../open-ai-tests.mjs';
+import { specificResponse } from '../open-ai-tests.mjs';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          test
+          specificResponse: {specificResponse}
         </p>
         <a
           className="App-link"

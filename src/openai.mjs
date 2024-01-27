@@ -27,5 +27,6 @@ async function main(blah) {
 
   return out_message; // Exporting the out_message variable
 }
+const openai_message = main('how safe is irvine california');
+export default openai_message;
 
-export default main('how safe is irvine california'); // Exporting the main function

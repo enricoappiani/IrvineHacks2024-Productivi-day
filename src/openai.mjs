@@ -24,6 +24,8 @@ async function main(blah) {
     console.log(x)
   }
   console.log("\n")
+
+  return out_message; // Exporting the out_message variable
 }
 
-main("My schedule is: wake up 8 am, play league to 12pm, go to class to 1pm, eat lunch which was Jamaican Jerk, do homework from 2pm to 5pm, eat dinner which was Jamaican Jerk (I love Jamaican Jerk), then play league for 5 hours, then homework from 11pm to 3 am, sleep at 3 am. Can you point out any bad habits in my schedule");
+export default main; // Exporting the main function

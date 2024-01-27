@@ -1,6 +1,6 @@
 import logo from './logo.jpg';
 import './App.css';
-import { specificResponse } from '../open-ai-tests.mjs';
+import { specificResponse } from './open-ai-tests.mjs';
 
 function App() {
   return (

@@ -1,8 +1,5 @@
 import OpenAI from "openai";
-import OPENAI_API_KEY from "./.env";
-const openai = new OpenAI({
-   apiKey: OPENAI_API_KEY
- });
+const openai = new OpenAI;
 
 async function main(blah) {
   const completion = await openai.chat.completions.create({

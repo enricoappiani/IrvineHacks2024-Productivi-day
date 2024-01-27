@@ -28,4 +28,4 @@ import OpenAI from "openai";
 //   return out_message; // Exporting the out_message variable
 // }
 
-export default main; // Exporting the main function
+//export default main; // Exporting the main function

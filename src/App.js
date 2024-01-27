@@ -7,9 +7,11 @@ function App() {
 
   return (
     <div className="App">
-
+      <h2 class="text-4xl font-extrabold dark:text-white">Productivi-Day</h2>
+      
       <div class="flex border-8 columns-2 gap-7 flex-auto justify-between p-10" >
-        <div class="flex border-8 grid grid-cols-2 gap-2 p-5 flex-nowrap">
+      <p class="my-4 text-lg text-gray-300">Activity log:</p>
+        <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 flex-nowrap text-gray-600">
          <form> 
             <input size="10" placeholder='12 A.M.'></input>
           </form>  
@@ -82,8 +84,6 @@ function App() {
           <form> 
             <input size="10" placeholder='11 P.M.'></input>
           </form>  
-
-            
         </div>
         <div class='p-10'>
           <h1>Output</h1>

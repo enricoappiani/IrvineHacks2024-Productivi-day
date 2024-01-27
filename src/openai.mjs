@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-
+var out_message = "";
 const openai = new OpenAI({
   apiKey: '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'
 });
@@ -10,7 +10,7 @@ async function main() {
     model: "gpt-3.5-turbo",
   });
 
-  const out_message = completion.choices[0]['message']['content'];
+  out_message = completion.choices[0]['message']['content'];
   console.log(out_message);
 }
 

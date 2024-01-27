@@ -1,6 +1,6 @@
 import logo from './logo.jpg';
 import './App.css';
-import { specificResponse } from './openai.mjs';
+import { out_message } from './openai.mjs';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          specificResponse: {specificResponse}
+          out_message: {out_message}
         </p>
         <a
           className="App-link"

@@ -28,5 +28,4 @@ async function main() {
   return out_message; // Exporting the out_message variable
 }
 const openai_message = main()
-console.log(openai_message)
-
+export default openai_message;

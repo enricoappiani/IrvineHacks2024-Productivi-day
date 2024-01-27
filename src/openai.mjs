@@ -1,7 +1,7 @@
 import OpenAI from "openai";
-
+import OPENAI_API_KEY from "./.env";
 const openai = new OpenAI({
-   apiKey: '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'
+   apiKey: OPENAI_API_KEY
  });
 
 async function main(blah) {

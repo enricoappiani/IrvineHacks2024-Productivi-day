@@ -1,33 +1,25 @@
 import logo from './logo.jpg';
 import './App.css';
+//makes white screen for some magical reason
+//import './openai.mjs'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          test
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </header>
-      <div className='grid-container'>
-        <div className='grid-items'>
-          <p>daufhbsy</p>
-        </div>
-        <div className='grid-items'>
-          <p>daufhbsy</p>
-        </div>
-        <div className='grid-items'>
-          <p>daufhbsy</p>
-        </div>
-        <div className='grid-items'>
-          <p>daufhbsy</p>
-        </div>
-        <div className='grid-items'>
-          <p>daufhbsy</p>
-        </div><div className='grid-items'>
-          <p>daufhbsy</p>
-        </div>
-        
-
-      </div>
     </div>
   );
 }

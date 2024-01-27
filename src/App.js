@@ -1,7 +1,7 @@
 import logo from './logo.jpg';
 import './App.css';
 //makes white screen for some magical reason
-//import './openai.mjs'
+import './openai.mjs'
 
 function App() {
   return (

@@ -13,5 +13,5 @@ async function main() {
   out_message = completion.choices[0]['message']['content'];
   console.log(out_message);
 }
-export { out_message };
+export default
 main();

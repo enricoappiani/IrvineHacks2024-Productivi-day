@@ -85,9 +85,13 @@ function App() {
 
             
         </div>
-        <div class='flex p-10'>
+        <div class='p-10'>
           <h1>Output</h1>
-          <p class='border-8'>outpuut</p>
+          <p class='border-8 p-7'>
+            dafhuloutpuut
+            <br></br>
+            yapyapyapyap
+          </p>
         </div>
       </div>
     </div>

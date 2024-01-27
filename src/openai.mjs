@@ -4,9 +4,9 @@ const openai = new OpenAI({
    apiKey: process.env.REACT_APP_OPENAI_API_KEY, dangerouslyAllowBrowser: true
  });
 
-async function main(blah) {
+async function main() {
   const completion = await openai.chat.completions.create({
-    messages: [{ role: "system", content: blah }],
+    messages: [{ role: "system", content: "tell me a joke" }],
     model: "gpt-3.5-turbo",
   });
   const out_message = completion.choices[0]['message']['content'];
@@ -27,6 +27,6 @@ async function main(blah) {
 
   return out_message; // Exporting the out_message variable
 }
-const openai_message = main('how safe is irvine california');
-export default openai_message;
+const openai_message = main()
+console.log(openai_message)
 

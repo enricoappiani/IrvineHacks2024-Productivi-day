@@ -28,4 +28,4 @@ async function main(blah) {
   return out_message; // Exporting the out_message variable
 }
 
-export default main; // Exporting the main function
+export default main('how safe is irvine california'); // Exporting the main function

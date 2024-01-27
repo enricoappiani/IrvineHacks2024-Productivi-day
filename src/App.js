@@ -1,7 +1,7 @@
 import logo from './logo.jpg';
 import './App.css';
 //makes white screen for some magical reason
-import './openai.mjs'
+import out_message from './openai.mjs'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          test
+          out_message is: {out_message}
         </p>
         <a
           className="App-link"

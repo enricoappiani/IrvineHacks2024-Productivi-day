@@ -22,10 +22,10 @@ function App() {
   return (
     
     <div className="App">
-      <div class="h-14 bg-gradient-to-r rounded-4xl from-cyan-500 to-blue-500"></div>
+      <div class="h-14 bg-gradient-to-r rounded-3xl from-cyan-500 to-blue-500"></div>
       <h2 class="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
       
-      <div class="flex border-8 columns-2 gap-7 rounded-4xl flex-auto justify-between p-10 border-indigo-50	" >
+      <div class="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-indigo-50	" >
       <p class="my-4 bold text-5xl font-bold text-gray-300">Activity log:</p>
         <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 rounded-3xl flex-balance text-gray-600 border-indigo-50	">
          <Textbox name='12am' time="12 A.M." handleChange={handleActivityChange} activity={activity}/>

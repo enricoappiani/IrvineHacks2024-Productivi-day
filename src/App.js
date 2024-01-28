@@ -22,15 +22,15 @@ function App() {
     <div className="App">
       <h2 class="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
       
-      <div class="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-sky-400" >
+      <div class="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-indigo-50	" >
       <p class="my-4 bold text-5xl font-bold text-gray-300">Activity log:</p>
-        <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 rounded-3xl flex-balance text-gray-600 border-sky-400	">
+        <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 rounded-3xl flex-balance text-gray-600 border-indigo-50	">
          <Textbox name='12am' time="12 A.M." handleChange={handleActivityChange} activity={activity}/>
          <Textbox name='12pm' time="12 P.M." handleChange={handleActivityChange} activity={activity}/>
         </div>
         <div class='p-10'>
           <h1 class='font-bold'>Output</h1>
-          <p class='border-8 p-7 rounded-3xl border-sky-400	m-5'>
+          <p class='border-8 p-7 rounded-3xl border-indigo-50	m-5'>
             dafhuloutpuut
             <br></br>
             yapyapyapyap

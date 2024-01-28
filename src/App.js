@@ -10,7 +10,7 @@ function App() {
       <h2 class="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
       
       <div class="flex border-8 columns-2 gap-7 flex-auto justify-between p-10 border-sky-400" >
-      <p class="my-4 text-lg text-gray-300">Activity log:</p>
+      <p class="my-4 text-5xl font-bold text-gray-300">Activity log:</p>
         <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 flex-nowrap text-gray-600 border-sky-400	">
          <form class="bg-white shadow-md rounded px-8 pt-3 pb-3 mb-4"> 
             <input size="15" placeholder='12 A.M.'></input>

@@ -41,8 +41,9 @@ export default async function schedule_changer(user_schedule){
     const bad_schedule = "A person's typicaly daily schedule is as follows: " + times + ". Return, in the exact format of the schedule I just gave you, an updated schedule that replaces only (this is very important) the unhealthy activities with healthy/neutral ones. DO NOT, UNDER ANY CIRCUMSTANCE, replace any of the neutral or healthy activities, ONLY THE UNHEALTHY ONES. Ideally make sure the new schedule has 8 hours of sleep, 3 meals a day, and at least 1 hour of exercise, as well as perhaps some self-care being going to bed. Return a realistic schedule that prioritizes one's well-being. ";
     const healthy_schedule = main(bad_schedule);
     const healthy_dict = healthy_schedule.then((res) => stringToDictionary(res));
+    healthy_schedule.then((res) => console.log(res));
     healthy_dict.then((res) => console.log(res));
-return healthy_schedule;
+return healthy_dict;
 }
 
 

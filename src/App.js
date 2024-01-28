@@ -15,11 +15,11 @@ function App() {
     console.log(activity)
   }
 
-  const handleClick = (event) => {
+  const handleClick = async (event) => {
     event.preventDefault()
-    const newSchedule = schedule_changer(activity)
-    console.log(newSchedule)
+    const newSchedule = await schedule_changer(activity)
     setActivity(newSchedule)
+    console.log(newSchedule)
   }
 
   return (

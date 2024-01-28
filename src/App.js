@@ -20,8 +20,8 @@ function App() {
   async function handleClick(event) {
     let open_ai_output = await schedule_changer(activity);
     let short_summary = await main("A person's typicaly daily schedule is as follows: " + open_ai_output + ". Return, in AT MOST 2 sentences, a short summary describing the unhealthy activities in the schedule and how to change them.");
-    console.log('ai output', open_ai_output)
-    console.log('short summary', short_summary)
+    //console.log('ai output', open_ai_output)
+    //console.log('short summary', short_summary)
     
 
     setActivity(open_ai_output)

@@ -2,6 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+
 .App {
   text-align: center;
   background-color: #0284c7;

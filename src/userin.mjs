@@ -11,5 +11,5 @@ export default async function schedule_changer(activities_list){
     const healthy_schedule = main(bad_schedule);
     const bad_habits = main("A person's typicaly daily schedule is as follows: " + times + "Return, in the same format of time: activity, a list of only the bad habits in the schedule I just gave you.");
     //healthy_schedule.then((res) => console.log(res));
-return healthy_schedule, bad_habits;
+return [healthy_schedule, bad_habits];
 }

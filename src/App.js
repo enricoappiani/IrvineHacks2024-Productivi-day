@@ -19,7 +19,9 @@ function App() {
   }
 
   return (
+    
     <div className="App">
+      <div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
       <h2 class="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
       
       <div class="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-sky-400" >
@@ -41,7 +43,10 @@ function App() {
         </div>
          
       </div>
-      
+      <div class="flex justify-center items-center h-screen">
+        <img src="./productivi-day.jpg" alt="Your Image" class="rounded-lg shadow-lg">
+          </img>
+    </div>
     </div>
   );
 }

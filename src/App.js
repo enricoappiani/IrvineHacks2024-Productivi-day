@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import logo from './logo.jpg';
 import './App.css';
-import main from './openai.mjs'
+import schedule_changer from './userin.mjs'
+
+//this is just to test, replace activites_list with real user list
+const activities_list = ['smoke', 'drugs', 'alcohol', 'bang head', 'eat bad food', 'sing', 'paint', 'code', 'swim', 'hike', 'meditate', 'yoga', 'draw', 'play', 'study', 'explore', 'travel', 'volunteer', 'garden', 'cycle', 'photograph', 'listen', 'learn', 'create'];
+//remove above for real
 
 function App() {
-  const [msg, setMsg ] = useState("")
-  
+  const [new_schedule, setMsg ] = useState("")
   useEffect(() => {
-    const lol = main("My schedule is: wake up 8 am, play league to 12pm, go to class to 1pm, eat lunch which was Jamaican Jerk, do homework from 2pm to 5pm, eat dinner which was Jamaican Jerk (I love Jamaican Jerk), then play league for 5 hours, then homework from 11pm to 3 am, sleep at 3 am. What are some bad habits of my schedule?")
-    lol.then((res) => setMsg(res))
+    schedule_changer(activities_list).then((res) => setMsg(res))
+
   }, [])
 
   return (
@@ -16,7 +19,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {msg}
+          {new_schedule}
         </p>
         <a
           className="App-link"

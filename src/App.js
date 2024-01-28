@@ -1,6 +1,5 @@
 import logo from './logo.jpg';
 import './App.css';
-//makes white screen for some magical reason
 import out_message from './openai.mjs'
 
 function App() {

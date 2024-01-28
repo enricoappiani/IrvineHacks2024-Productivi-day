@@ -1,19 +1,10 @@
-# Create React App
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+## Productivi-day, IrvineHacks2024 Project
+Deployed on Vercel, primarily uses Node.JS, React, Tailwind CSS, & HTML for a flawless user experience. Used Figma to draw up UI concepts.
 
-## Deploy Your Own
 
-Deploy your own Create React App project with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
-
-_Live Example: https://create-react-template.vercel.app/_
-
-## Available Scripts
-
-In the project directory, you can run:
-
+### USAGE
 ### `npm start`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

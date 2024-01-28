@@ -9,9 +9,13 @@ const activities_list = ['smoke', 'drugs', 'alcohol', 'bang head', 'eat bad food
 
 function App() {
   const [new_schedule, setMsg ] = useState("")
+  const [bad_habits, setMsg2 ] = useState("")
   useEffect(() => {
-    schedule_changer(activities_list).then((res) => setMsg(res))
-
+    schedule_changer(activities_list).then((res) => {
+      const [msg1, msg2] = res;
+      setMsg(msg1);
+      setMsg2(msg2);
+    });
   }, [])
 
   return (
@@ -20,6 +24,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           {new_schedule}
+          {bad_habits}
         </p>
         <a
           className="App-link"

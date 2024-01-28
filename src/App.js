@@ -1,4 +1,5 @@
 import './App.css';
+import productivity from './images/productivi-day.jpg'
 import { useState, useEffect } from 'react'
 import Textbox from './components/Textbox'
 
@@ -43,10 +44,9 @@ function App() {
         </div>
          
       </div>
-      <div class="flex justify-center items-center h-screen">
-        <img src="./productivi-day.jpg" alt="Your Image" class="rounded-lg shadow-lg">
-          </img>
-    </div>
+      <div class='p-10'>
+        <img src={productivity} alt="Logo" class='rounded-lg shadow-lg object-scale-down h-48 w-50' id='productivity' />
+      </div>  
     </div>
   );
 }

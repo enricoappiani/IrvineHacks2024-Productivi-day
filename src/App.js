@@ -1,6 +1,7 @@
 import logo from './logo.jpg';
 import './App.css';
-//import out_message from './openai.mjs'
+import './openai.mjs'
+openai_message = require ('./openai.mjs')
 
 function App() {
   return (

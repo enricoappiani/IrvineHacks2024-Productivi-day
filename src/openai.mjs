@@ -9,7 +9,7 @@ const openai = new OpenAI({
    model: "gpt-3.5-turbo",
  });
  const out_message = (completion.choices[0]['message']['content']);
- console.log(out_message)
-
-export default out_message;
-
+ 
+module.exports = {
+  out_message
+}

@@ -10,12 +10,8 @@ const activities_list = ['smoke', 'drugs', 'alcohol', 'bang head', 'eat bad food
 function App() {
   const [new_schedule, setMsg ] = useState("")
   useEffect(() => {
-    schedule_changer(activities_list).then((res) => {
-      const [msg] = res;
-      setMsg(msg);
-    });
+    schedule_changer(activities_list).then((res) => setMsg(res))
   }, [])
-
   return (
     <div className="App">
       <header className="App-header">

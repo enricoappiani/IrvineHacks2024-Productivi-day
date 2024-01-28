@@ -1,9 +1,7 @@
 import './App.css';
-import productivity from './images/productivi-day.jpg'
 import { useState, useEffect, updateState } from 'react'
 import Textbox from './components/Textbox'
 import schedule_changer from './schedule_changer.mjs'
-import { act } from 'react-dom/test-utils';
 import React from 'react'
 
 function App() {
@@ -20,8 +18,9 @@ function App() {
   }
 
   async function handleClick(event) {
-    let open_ai_output = await schedule_changer(activity);
+    let open_ai_output, short_summary = await schedule_changer(activity);
     console.log('ai output', open_ai_output)
+    console.log('ai summary', short_summary)
 
     setActivity(open_ai_output)
 

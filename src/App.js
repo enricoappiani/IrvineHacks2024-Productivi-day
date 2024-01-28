@@ -30,15 +30,37 @@ function App() {
         <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 rounded-3xl flex-balance text-gray-600 border-indigo-50	">
          <Textbox name='12am' time="12 A.M." handleChange={handleActivityChange} activity={activity}/>
          <Textbox name='12pm' time="12 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='1am' time="1 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='1pm' time="1 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='2am' time="2 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='2pm' time="2 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='3am' time="3 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='3pm' time="3 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='4am' time="4 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='4pm' time="4 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='5am' time="5 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='5pm' time="5 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='6am' time="6 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='6pm' time="6 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='7am' time="7 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='7pm' time="7 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='8am' time="8 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='8pm' time="8 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='9am' time="9 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='9pm' time="9 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='10am' time="10 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='10pm' time="10 P.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='11am' time="11 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='11pm' time="11 P.M." handleChange={handleActivityChange} activity={activity}/>
         </div>
-        <div class='p-10'>
-          <h1 class='font-bold'>Output</h1>
-          <p class='border-8 p-7 rounded-3xl border-indigo-50	m-5'>
-            dafhuloutpuut
+        <div class='flex flex-col p-10 max-w-screen-md text-wrap'>
+          <h1 class='font-bold'>Suggestions:</h1>
+          <p class='text-wrap text-wrap border-8 p-7 rounded-3xl border-indigo-50	m-5'>
+            dafhuloutpuutsadfhjbsadhljbfsadfjnsalfjdasndsflkdnsfflkdsajndfsaljkasdfhjlsadjkfn
             <br></br>
             yapyapyapyap
           </p>
-          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-xl inline-flex items-right-bottom" onClick={handleClick}>
+          <button class="items-center bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-xl inline-flex" onClick={handleClick}>
             <span>Optimize day</span>
           </button> 
         </div>

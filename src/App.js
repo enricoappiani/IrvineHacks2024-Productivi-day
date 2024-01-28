@@ -1,10 +1,14 @@
 import './App.css';
 import productivity from './images/productivi-day.jpg'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, updateState } from 'react'
 import Textbox from './components/Textbox'
 import schedule_changer from './schedule_changer.mjs'
+import { act } from 'react-dom/test-utils';
+import React from 'react'
 
 function App() {
+  const times_list = ['12AM', '1AM', '2AM', '3AM', '4AM', '5AM', '6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM', '9PM', '10PM', '11PM'];
+
   const [activity, setActivity] = useState({})
   const [newActivity, setNewActivity] = useState('')
   const [time, setTime] = useState('')
@@ -15,46 +19,42 @@ function App() {
     console.log(activity)
   }
 
-  const handleClick = async (event) => {
-    event.preventDefault()
-    const newSchedule = await schedule_changer(activity)
-    setActivity(newSchedule)
-    console.log(newSchedule)
+  async function handleClick(event) {
+    let open_ai_output = await schedule_changer(activity);
+    console.log('ai output', open_ai_output)
+
+    setActivity(open_ai_output)
+
+    Object.entries(open_ai_output).map((eachTimeSet) => {
+      document.getElementById(`input-${eachTimeSet[0]}`).value = eachTimeSet[1]
+    })
+    console.log('check new activity has been set', activity)
   }
+
+  useEffect(() => {
+    console.log('activity changed', activity)
+  }, [activity])
 
   return (
     
     <div className="App">
-      <div class="h-14 bg-gradient-to-r rounded-3xl from-cyan-500 to-blue-500"></div>
-      <h2 class="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
+      <div className="h-14 bg-gradient-to-r rounded-3xl from-cyan-500 to-blue-500"></div>
+      <h2 className="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
       
-      <div class="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-indigo-50	" >
-      <p class="my-4 bold text-5xl font-bold text-gray-300">Activity log:</p>
-        <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 rounded-3xl flex-balance text-gray-600 border-indigo-50	">
-         <Textbox name='12AM' time="12 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='12PM' time="12 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='1AM' time="1 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='1PM' time="1 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='2AM' time="2 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='2PM' time="2 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='3AM' time="3 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='3PM' time="3 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='4AM' time="4 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='4PM' time="4 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='5AM' time="5 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='5PM' time="5 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='6AM' time="6 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='6PM' time="6 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='7AM' time="7 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='7PM' time="7 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='8AM' time="8 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='8PM' time="8 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='9AM' time="9 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='9PM' time="9 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='10AM' time="10 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='10PM' time="10 PM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='11AM' time="11 AM" handleChange={handleActivityChange} activity={activity}/>
-         <Textbox name='11PM' time="11 PM" handleChange={handleActivityChange} activity={activity}/>
+      <div className="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-indigo-50	" >
+      <p className="my-4 bold text-5xl font-bold text-gray-300">Activity log:</p>
+        
+
+        <div className="w-full flex border-8 p-5 rounded-3xl flex-balance text-gray-600 border-indigo-50	">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+        {
+          times_list.map((entry) => (
+            
+                <Textbox name={entry} key={entry} time={entry} handleChange={handleActivityChange} activity={activity[entry]}/>
+            
+          ))
+        }
+        </div>
         </div>
         <div class='p-10'>
           <h1 class='font-bold'>Output</h1>
@@ -69,6 +69,8 @@ function App() {
         </div>
          
       </div>
+
+      
       <div class='p-10'>
         <img src={productivity} alt="Logo" class='rounded-lg shadow-lg object-scale-down h-48 w-50' id='productivity' />
       </div>  

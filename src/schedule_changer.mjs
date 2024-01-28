@@ -45,5 +45,3 @@ export default async function schedule_changer(user_schedule){
     healthy_dict.then((res) => console.log(res));
 return healthy_dict;
 }
-
-

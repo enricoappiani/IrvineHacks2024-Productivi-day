@@ -25,9 +25,28 @@ function App() {
 
     setActivity(open_ai_output)
 
+    let summary = []
+
     Object.entries(open_ai_output).map((eachTimeSet) => {
       document.getElementById(`input-${eachTimeSet[0]}`).value = eachTimeSet[1]
+      if(!(eachTimeSet[1] in summary)){
+        summary.push(eachTimeSet[1])
+      }
     })
+
+    document.getElementById('text').innerText = ''
+    let ul = document.getElementById("list");
+
+    console.log(summary)
+
+    summary.map((element) => {
+      let li = document.createElement("li");
+      li.appendChild(document.createTextNode(element));
+      ul.appendChild(li);
+    })
+
+    
+
     console.log('check new activity has been set', activity)
   }
 
@@ -59,9 +78,10 @@ function App() {
         </div>
         </div>
         <div class='flex p-10 flex-col justify-center'>
-          <p className="my-4 bold text-5xl font-bold" id="output">output</p>
+          <p className="my-4 bold text-5xl font-bold" id="output">summary</p>
           <p class='border-y-2 p-7 border-blue-200	m-5' id="text">
-            
+            Enter a schedule!
+            <ul id='summary-list'> </ul>
           </p>
           <button class="hover:bg-gray-400 font-bold py-9 px-4 rounded-xl h-10 m-3" onClick={handleClick}>
             <span>Optimize day</span>

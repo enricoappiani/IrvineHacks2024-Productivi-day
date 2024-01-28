@@ -29,6 +29,7 @@ function App() {
     Object.entries(open_ai_output).map((eachTimeSet) => {
       document.getElementById(`input-${eachTimeSet[0]}`).value = eachTimeSet[1]
     })
+    document.getElementById("text").textContent = short_summary
     console.log('check new activity has been set', activity)
   }
 
@@ -61,7 +62,7 @@ function App() {
         </div>
         <div class='flex p-10 flex-col justify-center'>
           <p className="my-4 bold text-5xl font-bold" id="output">summary</p>
-          <p class='border-y-2 p-7 border-blue-200	m-5' id="text">
+          <p class='border-y-2 p-7 border-blue-200	m-5 max-w-80' id="text">
             Enter a schedule!
             <ul id='summary-list'> </ul>
           </p>

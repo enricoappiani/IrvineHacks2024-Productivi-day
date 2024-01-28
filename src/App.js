@@ -3,7 +3,7 @@ import { useState, useEffect, updateState } from 'react'
 import Textbox from './components/Textbox'
 import schedule_changer from './schedule_changer.mjs'
 import React from 'react'
-
+import main from './openai.mjs'
 function App() {
   const times_list = ['12AM', '1AM', '2AM', '3AM', '4AM', '5AM', '6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM', '9PM', '10PM', '11PM'];
 
@@ -18,9 +18,11 @@ function App() {
   }
 
   async function handleClick(event) {
-    let open_ai_output, short_summary = await schedule_changer(activity);
+    let open_ai_output = await schedule_changer(activity);
+    let short_summary = await main("A person's typicaly daily schedule is as follows: " + open_ai_output + ". Return, in AT MOST 2 sentences, a short summary describing the unhealthy activities in the schedule and how to change them.");
     console.log('ai output', open_ai_output)
-    console.log('ai summary', short_summary)
+    console.log('short summary', short_summary)
+    
 
     setActivity(open_ai_output)
 

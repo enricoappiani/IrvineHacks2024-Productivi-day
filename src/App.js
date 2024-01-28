@@ -25,28 +25,9 @@ function App() {
 
     setActivity(open_ai_output)
 
-    let summary = []
-
     Object.entries(open_ai_output).map((eachTimeSet) => {
       document.getElementById(`input-${eachTimeSet[0]}`).value = eachTimeSet[1]
-      if(!(eachTimeSet[1] in summary)){
-        summary.push(eachTimeSet[1])
-      }
     })
-
-    document.getElementById('text').innerText = ''
-    let ul = document.getElementById("list");
-
-    console.log(summary)
-
-    summary.map((element) => {
-      let li = document.createElement("li");
-      li.appendChild(document.createTextNode(element));
-      ul.appendChild(li);
-    })
-
-    
-
     console.log('check new activity has been set', activity)
   }
 

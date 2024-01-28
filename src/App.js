@@ -39,41 +39,39 @@ function App() {
     
     <div className="App">
       <div className="h-14 bg-gradient-to-r rounded-3xl from-cyan-500 to-blue-500"></div>
-      <h2 className="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
+      <h2 className="text-8xl font-extrabold p-5">Productivi-Day</h2>
       
-      <div className="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-indigo-50	" >
-      <p className="my-4 bold text-5xl font-bold text-gray-300">Activity log:</p>
-        
-
-        <div className="w-full flex border-8 p-5 rounded-3xl flex-balance text-gray-600 border-indigo-50	">
-        <div className="grid grid-cols-2 gap-x-4 gap-y-3">
-        {
-          times_list.map((entry) => (
+      <div className="flex border-t-4 columns-2 gap-7 flex-auto justify-between p-10 border-blue-200	" >
+      
+        <div>
+          <p className="my-4 bold text-5xl font-bold" id="activity"> activity log</p>
+          <div className="w-full flex border-t-2 p-5 flex-balance text-gray-600 border-blue-200	">
             
-                <Textbox name={entry} key={entry} time={entry} handleChange={handleActivityChange} activity={activity[entry]}/>
-            
-          ))
-        }
+            <div className="grid grid-cols-2 gap-x-4 gap-y-3">
+            {
+              times_list.map((entry) => (
+                
+                    <Textbox name={entry} key={entry} time={entry} handleChange={handleActivityChange} activity={activity[entry]}/>
+                
+              ))
+            }
+          </div>
         </div>
         </div>
-        <div class='p-10'>
-          <h1 class='font-bold'>Output</h1>
-          <p class='border-8 p-7 rounded-3xl border-indigo-50	m-5'>
+        <div class='flex p-10 flex-col justify-center'>
+          <p className="my-4 bold text-5xl font-bold" id="output">output</p>
+          <p class='border-y-2 p-7 border-blue-200	m-5' id="text">
             dafhuloutpuut
             <br></br>
             yapyapyapyap
           </p>
-          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-xl inline-flex items-right-bottom" onClick={handleClick}>
+          <button class="hover:bg-gray-400 font-bold py-1 px-2 rounded-xl h-10 m-3 pb-10" onClick={handleClick}>
             <span>Optimize day</span>
           </button> 
         </div>
          
       </div>
 
-      
-      <div class='p-10'>
-        <img src={productivity} alt="Logo" class='rounded-lg shadow-lg object-scale-down h-48 w-50' id='productivity' />
-      </div>  
     </div>
   );
 }

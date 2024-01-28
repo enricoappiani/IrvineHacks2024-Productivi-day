@@ -10,6 +10,9 @@ function App() {
       <h2 class="text-4xl font-extrabold dark:text-white">Productivi-Day</h2>
       
       <div class="flex border-8 columns-2 gap-7 flex-auto justify-between p-10" >
+
+
+
       <p class="my-4 text-lg text-gray-300">Activity log:</p>
         <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 flex-nowrap text-gray-600">
          <form> 
@@ -92,8 +95,14 @@ function App() {
             <br></br>
             yapyapyapyap
           </p>
+          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-right-bottom">
+          
+            <span>Optimize day</span>
+      </button> 
         </div>
+         
       </div>
+      
     </div>
   );
 }

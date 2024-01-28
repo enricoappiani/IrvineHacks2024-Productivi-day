@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import logo from './logo.jpg';
 import './App.css';
-import schedule_changer from './userin.mjs'
+import schedule_changer from './schedule_changer.mjs'
 
 //this is just to test, replace activites_list with real user list
 const activities_list = ['smoke', 'drugs', 'alcohol', 'bang head', 'eat bad food', 'sing', 'paint', 'code', 'swim', 'hike', 'meditate', 'yoga', 'draw', 'play', 'study', 'explore', 'travel', 'volunteer', 'garden', 'cycle', 'photograph', 'listen', 'learn', 'create'];

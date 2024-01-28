@@ -1,35 +1,52 @@
-import { useState, useEffect } from 'react';
-import logo from './logo.jpg';
 import './App.css';
-import schedule_changer from './schedule_changer.mjs'
-
-//this is just to test, replace activites_list with real user list
-const activities_list = ['smoke', 'drugs', 'alcohol', 'bang head', 'eat bad food', 'sing', 'paint', 'code', 'swim', 'hike', 'meditate', 'yoga', 'draw', 'play', 'study', 'explore', 'travel', 'volunteer', 'garden', 'cycle', 'photograph', 'listen', 'learn', 'create'];
-//remove above for real
+import productivity from './images/productivi-day.jpg'
+import { useState, useEffect } from 'react'
+import Textbox from './components/Textbox'
 
 function App() {
-  const [new_schedule, setMsg ] = useState("")
-  useEffect(() => {
-    schedule_changer(activities_list).then((res) => setMsg(res))
+  const [activity, setActivity] = useState({})
+  const [newActivity, setNewActivity] = useState('')
+  const [time, setTime] = useState('')
 
-  }, [])
+  const handleActivityChange = (event) => {
+    setNewActivity(event.target.value)
+    setActivity(prevState => ({ ...prevState, [event.target.name]: event.target.value }))
+    console.log(activity)
+  }
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    setActivity()
+  }
 
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {new_schedule}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+      <h2 class="text-8xl font-extrabold dark:text-white p-5">☀️Productivi-Day☀️</h2>
+      
+      <div class="flex border-8 columns-2 gap-7 rounded-3xl flex-auto justify-between p-10 border-indigo-50	" >
+      <p class="my-4 bold text-5xl font-bold text-gray-300">Activity log:</p>
+        <div class="w-full flex border-8 grid grid-cols-2 gap-2 p-5 rounded-3xl flex-balance text-gray-600 border-indigo-50	">
+         <Textbox name='12am' time="12 A.M." handleChange={handleActivityChange} activity={activity}/>
+         <Textbox name='12pm' time="12 P.M." handleChange={handleActivityChange} activity={activity}/>
+        </div>
+        <div class='p-10'>
+          <h1 class='font-bold'>Output</h1>
+          <p class='border-8 p-7 rounded-3xl border-indigo-50	m-5'>
+            dafhuloutpuut
+            <br></br>
+            yapyapyapyap
+          </p>
+          <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-xl inline-flex items-right-bottom" onClick={handleClick}>
+            <span>Optimize day</span>
+          </button> 
+        </div>
+         
+      </div>
+      <div class='p-10'>
+        <img src={productivity} alt="Logo" class='rounded-lg shadow-lg object-scale-down h-48 w-50' id='productivity' />
+      </div>  
     </div>
   );
 }

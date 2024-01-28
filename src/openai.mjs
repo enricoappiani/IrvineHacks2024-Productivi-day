@@ -2,7 +2,7 @@
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-   apiKey: process.env.REACT_APP_OPENAI_API_KEY, 
+   apiKey: "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", 
    dangerouslyAllowBrowser: true
  });
 
@@ -14,5 +14,5 @@ export default async function main(input) {
   const out_message = completion.choices[0]['message']['content'];
  
   return out_message;
-  
+
 }

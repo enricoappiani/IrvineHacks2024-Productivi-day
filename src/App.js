@@ -11,13 +11,15 @@ function App() {
   const [new_schedule, setMsg ] = useState("")
   useEffect(() => {
     schedule_changer(activities_list).then((res) => setMsg(res))
+
   }, [])
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          {new_schedule}          
+          {new_schedule}
         </p>
         <a
           className="App-link"

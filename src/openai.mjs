@@ -14,4 +14,5 @@ export default async function main(input) {
   const out_message = completion.choices[0]['message']['content'];
  
   return out_message;
+  
 }

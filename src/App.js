@@ -61,11 +61,9 @@ function App() {
         <div class='flex p-10 flex-col justify-center'>
           <p className="my-4 bold text-5xl font-bold" id="output">output</p>
           <p class='border-y-2 p-7 border-blue-200	m-5' id="text">
-            dafhuloutpuut
-            <br></br>
-            yapyapyapyap
+            
           </p>
-          <button class="hover:bg-gray-400 font-bold py-9 px-1 rounded-xl h-10 m-3" onClick={handleClick}>
+          <button class="hover:bg-gray-400 font-bold py-9 px-4 rounded-xl h-10 m-3" onClick={handleClick}>
             <span>Optimize day</span>
           </button> 
         </div>

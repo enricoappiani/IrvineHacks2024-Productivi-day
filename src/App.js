@@ -65,7 +65,7 @@ function App() {
             <br></br>
             yapyapyapyap
           </p>
-          <button class="hover:bg-gray-400 font-bold py-1 px-2 rounded-xl h-10 m-3 pb-10" onClick={handleClick}>
+          <button class="hover:bg-gray-400 font-bold py-9 px-1 rounded-xl h-10 m-3" onClick={handleClick}>
             <span>Optimize day</span>
           </button> 
         </div>

@@ -44,9 +44,12 @@ input {
 }
 
 button {
+  display: flex;
   background-color: #658bbb;
-  text-align: center;
   color: #f8f8ff;
+  font-size: 23px;
+  align-items: center;
+  justify-content: center;
 }
 
 #productivity {

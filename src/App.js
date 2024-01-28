@@ -2,6 +2,7 @@ import './App.css';
 import productivity from './images/productivi-day.jpg'
 import { useState, useEffect } from 'react'
 import Textbox from './components/Textbox'
+import schedule_changer from './schedule_changer.mjs'
 
 function App() {
   const [activity, setActivity] = useState({})
@@ -16,7 +17,9 @@ function App() {
 
   const handleClick = (event) => {
     event.preventDefault()
-    setActivity()
+    const newSchedule = schedule_changer(activity)
+    console.log(newSchedule)
+    setActivity(newSchedule)
   }
 
   return (
